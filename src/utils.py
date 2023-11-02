@@ -107,7 +107,8 @@ class LossWithIntermediateLosses:
 class EpisodeDirManager:
     def __init__(self, episode_dir: Path, max_num_episodes: int) -> None:
         self.episode_dir = episode_dir
-        self.episode_dir.mkdir(parents=False, exist_ok=True)
+        # self.episode_dir.mkdir(parents=False, exist_ok=True)
+        self.episode_dir.mkdir(parents=True, exist_ok=True)
         self.max_num_episodes = max_num_episodes
         self.best_return = float('-inf')
 
