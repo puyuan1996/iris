@@ -83,6 +83,7 @@ class WorldModelEnv:
         self.obs_tokens = torch.cat(obs_tokens, dim=1)        # (B, K)
 
         obs = self.decode_obs_tokens() if should_predict_next_obs else None
+
         return obs, reward, done, None
 
     @torch.no_grad()
