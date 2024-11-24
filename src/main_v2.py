@@ -25,13 +25,14 @@ if __name__ == "__main__":
     overrides_dict = {
         # 'env': {'train': {'id': 'BreakoutNoFrameskip-v4'}},
         'env': {'train': {'id': 'PongNoFrameskip-v4'}},
-        'common': {'device': 'cpu', 'seed': 0, 'resume': False},
-        'wandb': {'mode': 'disabled'},
+        'common': {'device': 'cuda:0', 'seed': 0, 'resume': False},
+        # 'common': {'device': 'cpu', 'seed': 0, 'resume': False},
+        # 'wandb': {'mode': 'disabled'},
         # TODO(pu): debug config
-        'collection': {'train': {'num_episodes_to_save': 10, 'num_envs': 1, 'config': {"num_steps": 20}}, 'test': {'num_episodes_to_save': 10}},
-        'evaluation': {'actor_critic': {'num_episodes_to_save': 64}},
+        # 'collection': {'train': {'num_episodes_to_save': 10, 'num_envs': 1, 'config': {"num_steps": 20}}, 'test': {'num_episodes_to_save': 10}},
+        # 'evaluation': {'actor_critic': {'num_episodes_to_save': 64}},
         # TODO(pu): debug config
-        'training': {'should': True, 'tokenizer': {"start_after_epochs": 1, "steps_per_epoch": 2, "batch_num_samples": 4}, 'world_model': {"start_after_epochs": 1, "steps_per_epoch": 2, "batch_num_samples": 4}, 'actor_critic': {"start_after_epochs": 1, "steps_per_epoch": 2, "batch_num_samples": 4}, },
+        # 'training': {'should': True, 'tokenizer': {"start_after_epochs": 1, "steps_per_epoch": 2, "batch_num_samples": 4}, 'world_model': {"start_after_epochs": 1, "steps_per_epoch": 2, "batch_num_samples": 4}, 'actor_critic': {"start_after_epochs": 1, "steps_per_epoch": 2, "batch_num_samples": 4}, },
     }
 
     overrides_dict = flatten(overrides_dict)

@@ -13,7 +13,8 @@ initialization:
   load_actor_critic: false
 common:
   epochs: 600
-  device: cpu
+  # device: cpu
+  device: cuda:0
   do_checkpoint: true
   seed: 0
   sequence_length: ${world_model.max_blocks}

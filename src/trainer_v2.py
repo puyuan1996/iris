@@ -48,8 +48,11 @@ class Trainer:
         # 格式化为字符串，格式为年月日时分
         timestamp = now.strftime("%Y%m%d%H%M")
 
-        debug_dir_prefix = '/Users/puyuan/code/iris/outputs/debug'
-        debug_dir_prefix_2 = '/Users/puyuan/code/iris'
+        # debug_dir_prefix = '/Users/puyuan/code/iris/outputs/debug'
+        # debug_dir_prefix_2 = '/Users/puyuan/code/iris'
+
+        debug_dir_prefix = '/mnt/afs/niuyazhe/code/iris/outputs/debug'
+        debug_dir_prefix_2 = '/mnt/afs/niuyazhe/code/iris'
 
         # 将时间戳添加到 debug_dir 的末尾
         debug_dir = debug_dir_prefix + '_' + timestamp + '/'
